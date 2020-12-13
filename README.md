@@ -21,4 +21,6 @@ You need to contact me, the creator of this project. You can contact me via:
 
 **Email:** ruifsilvaoliveira@gmail.com (Make sure the email's subject is "API Key request" or something like that)
 
-## How to use (In Progress)
+## How to use
+
+Give a look to "documentation.md" in this repo.
