@@ -1,6 +1,6 @@
 ## Search by name
 
-Request URL {GET} https://r6.apitab.com/search/{platform}/{name}
+Request URL {GET} https://r6.ruioliveira.xyz/api/v1/search/{platform}/{name}?apikey={api_key}
 
 PATH | **platform**:
 
@@ -12,9 +12,9 @@ PATH | **name**:
 
 - <i>**playername**</i> urlencode the playername<br>
 
-PARAMETER | **u**:
+PARAMETER | **apikey**:
 
-- <i>**unix**</i> provide the unix timestamp to avoid caching
+- <i>**apikey**</i> provide the api key
 
 #### Response Data:
 
@@ -41,7 +41,7 @@ PARAMETER | **u**:
 
 <i> **ranked**</i>: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/master/responses/playerdatabyname.json#L21)</u><br>
 
-Example: https://r6.apitab.com/search/uplay/BaIIer?u=1585761495
+Example: https://r6.ruioliveira.xyz/api/v1/search/uplay/BaIIer
 
 Example response: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/master/responses/playerdatabyname.json)</u>
 
@@ -49,19 +49,19 @@ Example response: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/mast
 
 ## Get player data by ID
 
-Request URL {GET} https://r6.apitab.com/player/{p_id}
+Request URL {GET} https://r6.ruioliveira.xyz/api/v1/player/{p_id}?apikey={api_key}
 
 PATH | **p_id**:
 
 - <i>**playerid**</i> is the ID that Ubisoft assigns to every player.<br>
 
-PARAMETER | **u**:
+PARAMETER | **apikey**:
 
-- <i>**unix**</i> provide the unix timestamp to avoid caching
+- <i>**apikey**</i> provide the api key
 
 An example of a player ID is: <i>**9bd44bde-9c48-48ae-9c2b-4e11e4b16083**</i>
 
-Example: https://r6.apitab.com/player/9bd44bde-9c48-48ae-9c2b-4e11e4b16083?u=1585761495
+Example: https://r6.ruioliveira.xyz/api/v1/player/9bd44bde-9c48-48ae-9c2b-4e11e4b16083
 
 Example response: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/master/responses/playerdatabyid.json)</u>
 
@@ -69,12 +69,16 @@ Operators IDs: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/master/
 
 <hr>
 
-## Update player data by ID
+## Update player data by ID (Not implemented yet)
 
-Request URL {GET} https://r6.apitab.com/update/{p_id}
+Request URL {GET} https://r6.ruioliveira.xyz/api/v1/update/{p_id}?apikey={api_key}
 
 PATH | **p_id**:
 - <i>**playerid**</i> is the ID that Ubisoft assigns to every player.<br>
+
+PARAMETER | **apikey**:
+
+- <i>**apikey**</i> provide the api key
 
 Please note, 1800 seconds need to pass for the profile to refresh. If an update request is sent sooner, the request will redirect.
 
@@ -82,7 +86,7 @@ Please note, 1800 seconds need to pass for the profile to refresh. If an update 
 
 ## Call the leaderboard
 
-Request URL {GET} https://r6.apitab.com/leaderboards/{platform}/{region}<br>
+Request URL {GET} https://r6.ruioliveira.xyz/api/v1/leaderboards/{platform}/{region}?apikey={api_key}<br>
 - Please note that players that are banned on R6Tab will not appear on this list and that **the leaderboards are refreshed every hour**<br>
 
 PATH | **platform**:
@@ -98,15 +102,15 @@ PATH | **region**:
 - <i>**asia**</i> will return top 100 Asian players<br>
 - <i>**all**</i> will return top 100 players in the world<br>
 
-PARAMETER | **u**:
+PARAMETER | **apikey**:
 
-- <i>**unix**</i> provide the unix timestamp to avoid caching
+- <i>**apikey**</i> provide the api key
 
-Example: https://r6.apitab.com/leaderboards/uplay/america?u=1585761495
+Example: https://r6.ruioliveira.xyz/api/v1/leaderboards/uplay/america
 
 Example response: <u>[Click Here](https://github.com/Tabwire/R6Tab-API/blob/master/responses/leaderboardresponse.json)</u>
 
 <hr>
 
 ## Affiliation
-- The R6Tab API is in no way shape or form affiliated with Ubisoft and its partners. Any "Rainbow Six: Siege" name, logos and/or images are registered trademarks of Ubisoft.
+- The R6Tab API and R6Tab API Proxy is in no way shape or form affiliated with Ubisoft and its partners. Any "Rainbow Six: Siege" name, logos and/or images are registered trademarks of Ubisoft.
